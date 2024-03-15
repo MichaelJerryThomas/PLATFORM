@@ -1,5 +1,7 @@
-// Java script.js
+//Java script.js
 document.getElementById('submitBtn').addEventListener('click', function() {
+    document.getElementById('submitBtn').setAttribute('disabled', '');
+
     var nama = document.getElementById('nama').value;
     var jumlah = parseInt(document.getElementById('jumlah').value);
   
@@ -24,6 +26,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
   
     document.getElementById('submitPilihanBtn').addEventListener('click', function() { // Menambahkan event listener untuk tombol OK baru
         var radioPilihanHtml = '';
+        document.getElementById('submitPilihanBtn').setAttribute('disabled', '');
         for (var i = 1; i <= jumlah; i++) {
             var teksPilihan = document.getElementById('pilihan' + i).value;
             radioPilihanHtml += '<div class="radio-item">';
